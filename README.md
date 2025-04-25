@@ -76,7 +76,32 @@ Create Database
   python create_db.py
 ```
 
-Delete dabase 
+Delete database 
 ```bash
   python delete_db.py
 ```
+
+To be able to update the changes we made to this code, we need to fork the original repository
+1. Click *fork* on the original repository
+2. Get the fork URL
+```bash
+git remote set-url origin https://github.com/yourusername-forkedURL/repo.git
+```
+3. Check which branch we are on
+```bash
+git remote -v
+```
+4. Push the new code back to the forked branch/the fork
+```bash
+git push -u origin main
+```
+5. Double check to make sure all remote files match the files on your local repository. If not, check then add them using
+```bash 
+git status
+git add README.md
+git commit -m "Update README content"
+git push -u origin main
+```
+6. Create a pull request on your fork on Github
+- Click "Compare and pull request"
+- Add a title/description and submit the PR
