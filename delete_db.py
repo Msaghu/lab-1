@@ -18,12 +18,14 @@ conn = mysql.connector.connect(
 # Create a cursor object
 cursor = conn.cursor()
 
-# Create a new database
+# deletes the database
 database_name = "kilifi" # Add a unique Database name
-cursor.execute(f"CREATE DATABASE IF NOT EXISTS {database_name}")
+cursor.execute(f"DROP DATABASE IF EXISTS {database_name}")
 
-print(f"Database '{database_name}' created successfully!")
+print(f"Database '{database_name}' deleted!")
 
 # Close the connection
 cursor.close()
 conn.close()
+
+
